@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Федерация Осознанных Граждан</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        .toolbar { background: #333; padding: 10px; }
+        .toolbar button { background: #555; color: white; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; }
+        .toolbar button:hover { background: #777; }
+        .content { padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <button onclick="showSection('home')">Главная</button>
+        <button onclick="showSection('about')">О нас</button>
+        <button onclick="showSection('how-it-works')">Как это работает</button>
+        <button onclick="showSection('faq')">FAQ</button>
+        <button onclick="showSection('contact')">Контакты</button>
+    </div>
+    
+    <div class="content" id="home">
+        <h1>Новый Мир для Тебя</h1>
+        <p>Федерация Осознанных Граждан — общество, которое заботится о каждом!</p>
+    </div>
+    
+    <div class="content" id="about" style="display:none;">
+        <h1>О нас</h1>
+        <p>Мы строим мир, где каждый человек обеспечен и имеет равные возможности.</p>
+    </div>
+    
+    <div class="content" id="how-it-works" style="display:none;">
+        <h1>Как это работает</h1>
+        <p>Ты вносишь вклад в общество знаниями, трудом, проектами. Взамен — обеспечение и поддержка.</p>
+    </div>
+    
+    <div class="content" id="faq" style="display:none;">
+        <h1>Часто задаваемые вопросы</h1>
+        <p>Ответы на популярные вопросы участников.</p>
+    </div>
+    
+    <div class="content" id="contact" style="display:none;">
+        <h1>Контакты</h1>
+        <p>Свяжись с нами, чтобы узнать больше!</p>
+    </div>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
